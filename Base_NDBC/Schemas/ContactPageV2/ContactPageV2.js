@@ -1,12 +1,23 @@
 define("ContactPageV2", [], function() {
 	return {
 		entitySchemaName: "Contact",
-		attributes: {},
+		attributes: {
+			"SetEnabledTestPriznak": {
+				"dataValueType": BPMSoft.DataValueType.BOOLEAN,
+				"type": BPMSoft.ViewModelColumnType.VIRTUAL_COLUMN,
+				"value": true
+				}
+		},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
 		businessRulesMultiplyActions: /**SCHEMA_ANGULAR_BUSINESS_RULES*/{}/**SCHEMA_ANGULAR_BUSINESS_RULES*/,
-		methods: {},
+		methods: {
+			init: function(){
+				this.callParent(arguments);
+				this.set("SetEnabledTestPriznak",false);
+			}
+		},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
@@ -131,7 +142,7 @@ define("ContactPageV2", [], function() {
 						"layoutName": "ContactPageGeneralContainer"
 					},
 					"bindTo": "nbcTestPriznak",
-					"enabled": true
+					"enabled": {"bindTo": "SetEnabledTestPriznak"},
 				},
 				"parentName": "ContactPageGeneralContainer",
 				"propertyName": "items",
