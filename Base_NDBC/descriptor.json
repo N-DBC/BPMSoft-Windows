@@ -1,0 +1,16 @@
+﻿{
+  "Descriptor": {
+    "UId": "fdc9c00d-9d31-3fd6-dd40-598e9fe5182d",
+    "Name": "Base_NDBC",
+    "BPMSoftVersion": "1.6.0",
+    "ModifiedOnUtc": "\/Date(1741261678000)\/",
+    "Maintainer": "Customer",
+    "DependsOn": [
+      {
+        "UId": "3f299622-2079-4a62-ba18-6d32c1d0d6af",
+        "PackageVersion": "7.8.0",
+        "Name": "SalesEnterprise_Marketing_ServiceEnt"
+      }
+    ]
+  }
+}
