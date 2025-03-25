@@ -1,28 +1,29 @@
-define("ContactPageV2", [], function() {
+define("AccountPageV2", [], function() {
 	return {
-		entitySchemaName: "Contact",
-		attributes: {
-			"SetEnabledTestPriznak": {
-				"dataValueType": BPMSoft.DataValueType.BOOLEAN,
-				"type": BPMSoft.ViewModelColumnType.VIRTUAL_COLUMN,
-				"value": true
-				}
-		},
+		entitySchemaName: "Account",
+		attributes: {},
 		modules: /**SCHEMA_MODULES*/{}/**SCHEMA_MODULES*/,
 		details: /**SCHEMA_DETAILS*/{}/**SCHEMA_DETAILS*/,
 		businessRules: /**SCHEMA_BUSINESS_RULES*/{}/**SCHEMA_BUSINESS_RULES*/,
 		businessRulesMultiplyActions: /**SCHEMA_ANGULAR_BUSINESS_RULES*/{}/**SCHEMA_ANGULAR_BUSINESS_RULES*/,
-		methods: {
-			init: function(){
-				this.callParent(arguments);
-				this.set("SetEnabledTestPriznak",false);
-			}
-		},
+		methods: {},
 		dataModels: /**SCHEMA_DATA_MODELS*/{}/**SCHEMA_DATA_MODELS*/,
 		diff: /**SCHEMA_DIFF*/[
 			{
 				"operation": "merge",
-				"name": "CompletenessContainer",
+				"name": "AccountPhotoContainer",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 0
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "AccountCompletenessContainer",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -34,14 +35,14 @@ define("ContactPageV2", [], function() {
 			},
 			{
 				"operation": "move",
-				"name": "CompletenessContainer",
+				"name": "AccountCompletenessContainer",
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
 				"index": 1
 			},
 			{
 				"operation": "merge",
-				"name": "EnrichCloudAndTimezoneContainer",
+				"name": "EnrichmentButtonContainer",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -53,14 +54,14 @@ define("ContactPageV2", [], function() {
 			},
 			{
 				"operation": "move",
-				"name": "EnrichCloudAndTimezoneContainer",
+				"name": "EnrichmentButtonContainer",
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
 				"index": 2
 			},
 			{
 				"operation": "merge",
-				"name": "ContactTimezonePage",
+				"name": "AccountName",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -72,7 +73,7 @@ define("ContactPageV2", [], function() {
 			},
 			{
 				"operation": "merge",
-				"name": "ContactAccountName",
+				"name": "AccountType",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -84,7 +85,7 @@ define("ContactPageV2", [], function() {
 			},
 			{
 				"operation": "merge",
-				"name": "ContactJobTitleProfile",
+				"name": "AccountOwner",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -96,7 +97,7 @@ define("ContactPageV2", [], function() {
 			},
 			{
 				"operation": "merge",
-				"name": "ContactAccountMobilePhone",
+				"name": "AccountWeb",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -108,7 +109,7 @@ define("ContactPageV2", [], function() {
 			},
 			{
 				"operation": "merge",
-				"name": "ContactAccountPhone",
+				"name": "AccountPhone",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -120,7 +121,7 @@ define("ContactPageV2", [], function() {
 			},
 			{
 				"operation": "merge",
-				"name": "ContactAccountEmail",
+				"name": "NewAccountCategory",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -131,42 +132,32 @@ define("ContactPageV2", [], function() {
 				}
 			},
 			{
-				"operation": "insert",
-				"name": "GivenName39b2c7a5-8281-4ebb-b6b4-dab831c6f127",
+				"operation": "merge",
+				"name": "AccountIndustry",
 				"values": {
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
 						"column": 0,
-						"row": 9,
-						"layoutName": "ProfileContainer"
-					},
-					"bindTo": "GivenName"
-				},
-				"parentName": "ProfileContainer",
-				"propertyName": "items",
-				"index": 9
+						"row": 9
+					}
+				}
 			},
 			{
-				"operation": "insert",
-				"name": "MiddleName4a6de341-8e45-4e2e-8536-87806d093d06",
+				"operation": "merge",
+				"name": "AccountEmail",
 				"values": {
 					"layout": {
 						"colSpan": 24,
 						"rowSpan": 1,
 						"column": 0,
-						"row": 10,
-						"layoutName": "ProfileContainer"
-					},
-					"bindTo": "MiddleName"
-				},
-				"parentName": "ProfileContainer",
-				"propertyName": "items",
-				"index": 10
+						"row": 10
+					}
+				}
 			},
 			{
 				"operation": "insert",
-				"name": "Surname55fdae83-ff04-466b-9c17-11d70595c894",
+				"name": "nbcCustomModuleAngular_3d3baa08-21f8-4a8e-8785-514a68214be3",
 				"values": {
 					"layout": {
 						"colSpan": 24,
@@ -175,146 +166,130 @@ define("ContactPageV2", [], function() {
 						"row": 11,
 						"layoutName": "ProfileContainer"
 					},
-					"bindTo": "Surname"
+					"itemType": 4,
+					"classes": {
+						"wrapClassName": [
+							"angular-grid-layout-item",
+							"nbcCustomModuleAngular",
+							"uniqueGuid-3d3baa08-21f8-4a8e-8785-514a68214be3",
+							"sysSchemaUId-bd89a353-8900-431b-b03e-9637a5c90f28",
+							"tabName-AccountPageGeneralTabContainer"
+						]
+					},
+					"id": "nbcCustomModuleAngular_3d3baa08-21f8-4a8e-8785-514a68214be3",
+					"markerValue": "AngularModule"
 				},
 				"parentName": "ProfileContainer",
 				"propertyName": "items",
 				"index": 11
 			},
 			{
-				"operation": "insert",
-				"name": "BOOLEAN6d674732-b946-4d58-b361-8c23784d5a93",
+				"operation": "merge",
+				"name": "AccountPageGeneralTabContainer",
+				"values": {
+					"order": 0
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "AlternativeName",
+				"values": {
+					"layout": {
+						"colSpan": 24,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 0
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "Code",
 				"values": {
 					"layout": {
 						"colSpan": 11,
 						"rowSpan": 1,
 						"column": 0,
-						"row": 3,
-						"layoutName": "ContactPageGeneralContainer"
-					},
-					"bindTo": "nbcTestPriznak",
-					"enabled": {
-						"bindTo": "SetEnabledTestPriznak"
+						"row": 1
 					}
-				},
-				"parentName": "ContactPageGeneralContainer",
-				"propertyName": "items",
-				"index": 6
+				}
 			},
 			{
 				"operation": "merge",
-				"name": "ContactPageServiceTab",
+				"name": "EmployeesNumber",
+				"values": {
+					"layout": {
+						"colSpan": 11,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 0
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "Ownership",
+				"values": {
+					"layout": {
+						"colSpan": 11,
+						"rowSpan": 1,
+						"column": 13,
+						"row": 0
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "AnnualRevenue",
+				"values": {
+					"layout": {
+						"colSpan": 11,
+						"rowSpan": 1,
+						"column": 0,
+						"row": 1
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "ContactsAndStructureTabContainer",
+				"values": {
+					"order": 1
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "AccountPageServiceTab",
 				"values": {
 					"order": 2
 				}
 			},
 			{
 				"operation": "merge",
-				"name": "CommunicationChannelsTab",
+				"name": "RelationshipTabContainer",
 				"values": {
-					"order": 6
+					"order": 4
 				}
 			},
 			{
 				"operation": "merge",
-				"name": "DoNotUseEmail",
-				"values": {
-					"layout": {
-						"colSpan": 11,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 0
-					}
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "DoNotUseSms",
-				"values": {
-					"layout": {
-						"colSpan": 11,
-						"rowSpan": 1,
-						"column": 13,
-						"row": 0
-					}
-				}
-			},
-			{
-				"operation": "move",
-				"name": "DoNotUseSms",
-				"parentName": "CommunicationChannelsContainer",
-				"propertyName": "items",
-				"index": 1
-			},
-			{
-				"operation": "merge",
-				"name": "DoNotUseCall",
-				"values": {
-					"layout": {
-						"colSpan": 11,
-						"rowSpan": 1,
-						"column": 0,
-						"row": 1
-					}
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "DoNotUseMail",
-				"values": {
-					"layout": {
-						"colSpan": 11,
-						"rowSpan": 1,
-						"column": 13,
-						"row": 1
-					}
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "JobTabContainer",
-				"values": {
-					"order": 7
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "HistoryTab",
-				"values": {
-					"order": 8
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "NotesAndFilesTab",
-				"values": {
-					"order": 9
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "ESNTab",
-				"values": {
-					"order": 10
-				}
-			},
-			{
-				"operation": "merge",
-				"name": "TrackingEventsTab",
+				"name": "HistoryTabContainer",
 				"values": {
 					"order": 5
 				}
 			},
 			{
 				"operation": "merge",
-				"name": "WrongBrowserInfoDescription",
+				"name": "NotesTabContainer",
 				"values": {
-					"layout": {
-						"colSpan": 20,
-						"rowSpan": 5,
-						"column": 3,
-						"row": 7
-					}
+					"order": 6
+				}
+			},
+			{
+				"operation": "merge",
+				"name": "ESNTab",
+				"values": {
+					"order": 7
 				}
 			}
 		]/**SCHEMA_DIFF*/

@@ -1,0 +1,44 @@
+﻿{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ClientUnitSchemaManager",
+      "UId": "bd89a353-8900-431b-b03e-9637a5c90f28",
+      "A2": "nbcCustomModuleAngular",
+      "A5": "4793ee1f-711a-47de-8b70-7971d61f54b6",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "fdc9c00d-9d31-3fd6-dd40-598e9fe5182d",
+      "B8": "1.6.0.190",
+      "HD1": "50e3acc0-26fc-4237-a095-849a1d534bd3",
+      "HD4": 10,
+      "HD6": "null",
+      "HD5": [
+        {
+          "UId": "25e1b20c-ddd6-4d6a-b1b8-663f8e74dd25",
+          "A2": "Dependency1",
+          "A3": "bd89a353-8900-431b-b03e-9637a5c90f28",
+          "A4": "bd89a353-8900-431b-b03e-9637a5c90f28",
+          "HW2": "ClientUnitSchemaManager"
+        }
+      ],
+      "HD7": [],
+      "HD8": [],
+      "HD11": [],
+      "HD9": "null",
+      "HD20": [
+        {
+          "BL1": "BPMSoft.Core.AngularParameter",
+          "UId": "01d8b66a-7b4b-aece-e500-2bfa0617cd35",
+          "A2": "idAccount",
+          "A3": "bd89a353-8900-431b-b03e-9637a5c90f28",
+          "A4": "bd89a353-8900-431b-b03e-9637a5c90f28",
+          "RX1": 1,
+          "RX2": "null",
+          "RX4": "a04ef396-873d-4cb1-acc1-dd1fd3944a49"
+        }
+      ],
+      "HD21": []
+    }
+  }
+}

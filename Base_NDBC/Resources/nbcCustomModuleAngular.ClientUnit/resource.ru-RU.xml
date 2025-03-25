@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="ru-RU">
+	<Group Type="String">
+		<Items>
+			<Item Name="AngularModuleParameters.01d8b66a-7b4b-aece-e500-2bfa0617cd35.Caption" Value="Название компании" />
+			<Item Name="AngularModuleParameters.01d8b66a-7b4b-aece-e500-2bfa0617cd35.Description" Value="Название компании" />
+			<Item Name="Caption" Value="nbcCustomModuleAngular" />
+		</Items>
+	</Group>
+</Resources>
